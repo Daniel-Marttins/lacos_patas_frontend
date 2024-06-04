@@ -7,4 +7,4 @@ export const useHookLocation = () => {
     return {
         handleChangeLocation
     }
-}
+} 

@@ -3,14 +3,11 @@ import { Button, Form, Input } from "antd";
 import img_two from '../images/img-2.png'
 import img_three from '../images/img-3.png'
 import { useHookLocation } from "../hooks/useHookLocation";
+import { useHookFormLogin } from "../controllers/useHookFormLogin";
 
 const Login: React.FC = () => {
-    const [form] = Form.useForm();
+    const { form, onFinish } = useHookFormLogin();
     const { handleChangeLocation } = useHookLocation();
-
-    const onFinish = (values: any) => {
-        console.log('Received values of form: ', values);
-    };
 
     return(
         <div className="flex items-center justify-betweens w-full h-full">
@@ -71,7 +68,7 @@ const Login: React.FC = () => {
                     </div>
                 </Form>
 
-                <a className="absolute bottom-10 text-sm text-blue-900" href="#">Ainda não tem uma conta? Acesse aqui</a>
+                <a className="absolute bottom-10 text-sm text-blue-900" href="/register">Ainda não tem uma conta? Acesse aqui</a>
             </div>
         </div>
     );
