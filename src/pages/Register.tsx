@@ -12,30 +12,31 @@ const Register: React.FC = () => {
 
     return(
         <div className="flex items-center justify-betweens w-full h-full">
-            <div className="flex items-center justify-center relative h-full bg-slate-800" style={{ width: '45%' }}>
+            <div className="flex items-center justify-center relative h-full" style={{ width: '45%', background: '#154B4D' }}>
                 <img src={img_three} style={{ width: 250, height: 250 }} className="absolute top-40 mr-5"/>
-                <h1 className="flex flex-col absolute bottom-36 text-4xl mt-28 w-3/4 text-slate-900 bg-slate-200 font-bold p-6">
+                <h1 className="flex flex-col absolute bottom-36 text-4xl mt-28 w-3/4 font-bold p-6" style={{ background: '#FFD6A8', color: '#154B4D' }}>
                     Junte-se ao Laços & Patas!
-                    <span className="text-slate-400 text-sm mt-4">
+                    <span className="text-gray-500 text-sm mt-4">
                         Faça parte dessa revolução na adoção de animais. Cadastre-se agora para começar a criar laços de amor e transformar vidas. Juntos, vamos dar patas para uma nova era de cuidado e compaixão. 🐾💛
                     </span>
                 </h1>
             </div>
 
-            <div className="flex items-center justify-center h-full bg-slate-300" style={{ width: '55%' }}>
+            <div className="flex items-center justify-center h-full" style={{ width: '55%', background: '#FFD6A8' }}>
                 <Form
                     form={form}
                     layout="vertical"
                     onFinish={onFinish}
                     className="flex flex-col items-center justify-center w-full h-full"
                 >
-                    <h1 className="text-slate-800 text-3xl items-start font-bold" style={{ width: '75%' }}>Laços & Patas - Cadastro</h1>
-                    <span className="text-slate-800 text-sm items-start mt-2" style={{ width: '75%' }}>Criando laços, salvando vidas!</span>
+                    <h1 className="text-3xl items-start font-bold" style={{ width: '75%', color: '#154B4D' }}>Laços & Patas - Cadastro</h1>
+                    <span className="text-sm items-start mt-2" style={{ width: '75%', color: '#154B4D' }}>Criando laços, salvando vidas!</span>
                     <div className="flex flex-row items-start justify-center border-l p-2 mt-8" style={{ width: '75%'}}>
                         <Form.Item 
                             label='Nome'
                             name='firstName'
-                            className="w-1/2 text-slate-800 mr-2"
+                            className="w-1/2 mr-2"
+                            style={{ color: '#154B4D' }}
                             rules={[
                                 {
                                     required: true,
@@ -157,7 +158,7 @@ const Register: React.FC = () => {
                         </Form.Item>
                     </div>
                     <div className="flex flex-row items-start justify-start border-l p-2 " style={{ width: '75%'}}>
-                        <Button type="primary" htmlType="submit" className="bg-green-700">Cadastrar</Button>
+                        <Button type="primary" htmlType="submit" style={{ background: '#154B4D' }}>Cadastrar</Button>
                     </div>
                 </Form>
 

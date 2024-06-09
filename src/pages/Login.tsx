@@ -11,11 +11,11 @@ const Login: React.FC = () => {
 
     return(
         <div className="flex items-center justify-betweens w-full h-full">
-            <div className="flex items-center justify-center relative h-full bg-slate-800" style={{ width: '65%' }}>
+            <div className="flex items-center justify-center relative h-full" style={{ width: '65%', background: '#154B4D' }}>
                 <img src={img_three} style={{ width: 250, height: 250 }} className="absolute top-40 left-28"/>
-                <h1 className="flex flex-col absolute bottom-36 text-5xl mt-28 w-3/4 text-slate-900 bg-slate-200 font-bold p-6">
+                <h1 className="flex flex-col absolute bottom-36 text-5xl mt-28 w-3/4 font-bold p-6" style={{ background: '#FFD6A8', color: '#154B4D' }}>
                     Bem-vindo ao Laços & Patas!
-                    <span className="text-slate-400 text-sm mt-4">
+                    <span className="text-gray-500 text-sm mt-4">
                         Faça parte dessa revolução na adoção de animais. Acesse sua conta para começar a criar laços de amor e transformar vidas. Juntos, vamos dar patas para uma nova era de cuidado e compaixão. 🐾💛
                     </span>
                 </h1>
@@ -28,15 +28,15 @@ const Login: React.FC = () => {
                 </Button>
             </div>
 
-            <div className="flex items-center justify-center h-full bg-slate-300" style={{ width: '35%' }}>
+            <div className="flex items-center justify-center h-full" style={{ width: '35%', background: '#FFD6A8' }}>
                 <Form
                     form={form}
                     layout="vertical"
                     onFinish={onFinish}
                     className="flex flex-col items-center justify-end w-full h-full"
                 >
-                    <h1 className="text-slate-800 text-3xl items-start font-bold" style={{ width: '60%' }}>Laços & Patas - Login</h1>
-                    <span className="text-slate-800 text-sm items-start mt-2" style={{ width: '60%' }}>Criando laços, salvando vidas!</span>
+                    <h1 className="text-3xl items-start font-bold" style={{ width: '60%', color: '#154B4D' }}>Laços & Patas - Login</h1>
+                    <span className="text-sm items-start mt-2" style={{ width: '60%', color: '#154B4D' }}>Criando laços, salvando vidas!</span>
                     <div className="flex flex-col items-start justify-center mt-2 mb-36" style={{ width: '60%', height: '40%' }}>
                         <Form.Item 
                             label='Email'
@@ -64,11 +64,11 @@ const Login: React.FC = () => {
                         >
                             <Input.Password placeholder="Senha" className="w-full mt-1"/>
                         </Form.Item>
-                        <Button htmlType="submit" type="primary">Acessar</Button>
+                        <Button htmlType="submit" style={{ background: '#154B4D' }} type="primary">Acessar</Button>
                     </div>
                 </Form>
 
-                <a className="absolute bottom-10 text-sm text-blue-900" href="/register">Ainda não tem uma conta? Acesse aqui</a>
+                <a className="absolute bottom-10 text-sm text-blue-600" href="/register">Ainda não tem uma conta? Acesse aqui</a>
             </div>
         </div>
     );

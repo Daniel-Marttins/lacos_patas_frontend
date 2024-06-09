@@ -16,16 +16,16 @@ export const useContent = ({ tabLeft, setTabLeft }: UseContentProps): React.Reac
     <div className={tabLeft === 0 ? "flex flex-col items-center justify-center h-full w-full absolute transition-all duration-700" : "flex flex-col items-center justify-center h-0 w-full overflow-hidden transition-all opacity-0 duration-700"} key="tab0">
       <div className="flex flex-col items-center justify-center mt-8" style={{ width: '90%' }}>
         <img src={icone} style={{ width: 114, height: 114 }} alt="Ícone" />
-        <h1 className="text-slate-50 text-3xl font-bold">Laços & Patas</h1>
-        <span className="text-slate-400 text-sm mt-2">Criando laços, salvando vidas!</span>
+        <h1 className="text-3xl font-bold" style={{ color: '#154B4D' }}>Laços & Patas</h1>
+        <span className="text-slate-500 text-sm mt-2">Criando laços, salvando vidas!</span>
       </div>
-      <Button type="primary" onClick={() => setTabLeft(1)} className="mt-4">Conhecer mais!</Button>
+      <Button type="primary" onClick={() => setTabLeft(1)} className="mt-4" style={{ background: '#154B4D' }}>Conhecer mais!</Button>
     </div>,
     
     <div className={tabLeft === 1 ? "flex flex-col items-center justify-center h-full w-full absolute transition-all duration-700 overflow-hidden" : "flex flex-col items-center justify-center h-0 w-full overflow-hidden opacity-0 transition-all duration-700"} key="tab1">
       <img src={img_two} alt="Imagem dois" />
       <div className="flex flex-col items-start justify-center mt-8" style={{ width: '85%' }}>
-        <h1 className="text-3xl font-bold text-slate-50">Bem-vindo ao Laços & Patas</h1>
+        <h1 className="text-3xl font-bold" style={{ color: '#154B4D' }}>Bem-vindo ao Laços & Patas</h1>
         <h2 className="text-xl text-slate-100">Transformando Vidas com Amor</h2>
         <span className="text-sm mt-4 text-slate-400">
           No Laços & Patas, acreditamos que cada animal merece um lar cheio de carinho. Somos uma plataforma dedicada à adoção e cuidados de animais, onde cada patinha encontra seu caminho para um lar amoroso.
